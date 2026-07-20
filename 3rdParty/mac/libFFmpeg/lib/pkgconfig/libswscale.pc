@@ -1,0 +1,14 @@
+prefix=/Users/chenchao/Downloads/ffmpeg-3.4/output
+exec_prefix=${prefix}
+libdir=/Users/chenchao/Downloads/ffmpeg-3.4/output/lib
+includedir=/Users/chenchao/Downloads/ffmpeg-3.4/output/include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 4.8.100
+Requires: libavutil >= 55.78.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswscale -lm
+Libs.private: 
+Cflags: -I${includedir}

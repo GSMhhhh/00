@@ -1,0 +1,38 @@
+# Qt build artifacts
+*.pro.user
+*.pro.user.*
+.qmake.stash
+Makefile
+Makefile.Debug
+Makefile.Release
+object_script.*.Debug
+object_script.*.Release
+
+# Build directories
+debug/
+release/
+build-*/
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# Compiled objects
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Claude
+.claude/

@@ -1,0 +1,14 @@
+prefix=/Users/chenchao/Downloads/ffmpeg-3.4/output
+exec_prefix=${prefix}
+libdir=/Users/chenchao/Downloads/ffmpeg-3.4/output/lib
+includedir=/Users/chenchao/Downloads/ffmpeg-3.4/output/include
+
+Name: libswresample
+Description: FFmpeg audio resampling library
+Version: 2.9.100
+Requires: libavutil >= 55.78.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswresample -lm
+Libs.private: 
+Cflags: -I${includedir}

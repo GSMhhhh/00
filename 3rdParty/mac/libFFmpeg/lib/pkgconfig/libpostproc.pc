@@ -1,0 +1,14 @@
+prefix=/Users/chenchao/Downloads/ffmpeg-3.4/output
+exec_prefix=${prefix}
+libdir=/Users/chenchao/Downloads/ffmpeg-3.4/output/lib
+includedir=/Users/chenchao/Downloads/ffmpeg-3.4/output/include
+
+Name: libpostproc
+Description: FFmpeg postprocessing library
+Version: 54.7.100
+Requires: libavutil >= 55.78.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lpostproc 
+Libs.private: 
+Cflags: -I${includedir}
