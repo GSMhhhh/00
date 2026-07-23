@@ -49,7 +49,7 @@ void CCOpenGLWidget::StartRecordVideo()
 #if defined(Q_OS_WIN32)
     QString pathStr = qApp->applicationDirPath() +"/"+ dateTime.toString("yyyyMMddhhmmss") + ".mp4";
 #else
-     QString pathStr = "/Users/chenchao/Desktop/" + dateTime.toString("yyyyMMddhhmmss") + ".mp4";
+     QString pathStr = qApp->applicationDirPath() +"/"+ dateTime.toString("yyyyMMddhhmmss") + ".mp4";
 #endif
 
     AVRecorderAPI_setupInputResolution(w,h);
@@ -230,7 +230,7 @@ void CCOpenGLWidget::processPBOReadPixels()
 //    if(readBuff)
 //    {
 
-//        QString tempPath="/Users/chenchao/Desktop/test.png";
+//        QString tempPath="test.png";
 
 //        QImage image = QImage((unsigned char*)readBuff, w, h, QImage::Format_RGB32);
 //        if (image.isNull())
@@ -339,7 +339,7 @@ void CCOpenGLWidget::saveImage()
     memset(data,0,w * h * 4);
     glReadPixels(0,0,w,h,GL_RGBA,GL_UNSIGNED_BYTE,data);
 
-    QString tempPath="/Users/chenchao/Desktop/test.png";
+    QString tempPath="test.png";
 
     QImage image = QImage(data, w, h, QImage::Format_RGB32);
     if (image.isNull())
